@@ -15,10 +15,10 @@ protocol OnboardingContentManager {
 
 final class OnboardingContentManagerImpl: OnboardingContentManager {
     
+    // MARK: - OnboardingContentManager Implementations -
     var limit: Int {
         items.count - 1
     }
-    
     var items: [OnboardingItem]
     
     init(manager: PlistManager) {

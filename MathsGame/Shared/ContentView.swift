@@ -9,21 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     
+    // MARK: - App Storage -
     @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
     
+    // MARK: - Binding View -
     var body: some View {
         
-        Text("Welcome to login screen")
+        LoginView()
             .fullScreenCover(isPresented: .constant(!hasSeenOnboarding),
                              content: {
                                 
-                                let plistManager = PlistManagerImpl()
-                                let onboardingContentManager = OnboardingContentManagerImpl(manager: plistManager)
-                                
-                                OnboardingScreenView(manager: onboardingContentManager) {
+                                OnboardingScreenView() {
                                     hasSeenOnboarding = true
                                 }
                              })
+        
     }
 }
 

@@ -11,14 +11,18 @@ typealias onboardingGetStarted = () -> Void
 
 struct OnboardingView: View {
     
+    // MARK: - Environment -
     @Environment(\.presentationMode) private var presentationMode
     
+    // MARK: - Variables -
     let item: OnboardingItem
-    let handler: onboardingGetStarted
     let limit: Int
-    
+    let handler: onboardingGetStarted
+
+    // MARK: - Binding -
     @Binding var index: Int
     
+    // MARK: - Membership inialitizer -
     internal init( item: OnboardingItem,
                    limit: Int,
                    index: Binding<Int>,
@@ -29,12 +33,13 @@ struct OnboardingView: View {
         self.handler = handler
     }
     
+    // MARK: - Binding -
     var body: some View {
         
         VStack {
             
             Spacer()
-                        
+            
             Image(item.imageName ?? "")
                 .padding(.bottom, 50)
                 .font(.system(size: 120, weight: .bold))
@@ -76,7 +81,7 @@ struct OnboardingView: View {
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView(item: OnboardingItem(title: "Dummy", content: "content is dummy", sfSymbol: "heart"),
+        OnboardingView(item: OnboardingItem(),
                        limit: 0,
                        index: .constant(0)) { }
     }

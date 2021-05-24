@@ -8,8 +8,70 @@
 import SwiftUI
 
 struct LoginView: View {
+    
+    // MARK: - Variables -
+    @State var email = ""
+    @State var password = ""
+    @State var isEmailValid = true
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack {
+            
+            Image("mathsLogo")
+                .padding(.bottom, 30)
+            
+            TextField("Email",
+                      text: $email) { isChanged in
+                
+            }
+            
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            .padding()
+            .keyboardType(.emailAddress)
+            .frame(width: UIScreen.main.bounds.width - 30, height: 45)
+            .autocapitalization(.none)
+            .disableAutocorrection(true)
+         
+            SecureField("Password",
+                        text: $password)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+                .frame(width: UIScreen.main.bounds.width - 30, height: 45)
+                .autocapitalization(.none)
+                .disableAutocorrection(true)
+                
+                .padding(.bottom, 15)
+            
+            HStack (spacing: 20) {
+                
+                Button(action: {
+                    
+                    print("Login")
+                    
+                }, label: {
+                    Text("Login")
+                })
+                .padding(.horizontal, 30)
+                .padding(.vertical, 8)
+                .foregroundColor(.white)
+                .background(Color.blue)
+                .clipShape(Capsule())
+                
+                Button(action: {
+                    print("Sign up")
+                    
+                }, label: {
+                    Text("Sign Up")
+                })
+                .padding(.horizontal, 30)
+                .padding(.vertical, 8)
+                .foregroundColor(.white)
+                .background(Color.blue)
+                .clipShape(Capsule())
+            }
+        }
+        .padding(.bottom, 150)
     }
 }
 

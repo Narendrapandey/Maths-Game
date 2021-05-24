@@ -15,6 +15,7 @@
 		136075B4265A5D5B00921B5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1360758A265A5D5600921B5E /* ContentView.swift */; };
 		136075B6265A5D5B00921B5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1360758B265A5D5B00921B5E /* Assets.xcassets */; };
 		1363FAB9265BF88A00442854 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1363FAB8265BF88A00442854 /* LoginView.swift */; };
+		1363FABB265C1DB100442854 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1363FABA265C1DB100442854 /* RegistrationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		136075A4265A5D5B00921B5E /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
 		136075A6265A5D5B00921B5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1363FAB8265BF88A00442854 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1363FABA265C1DB100442854 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				1363FAB8265BF88A00442854 /* LoginView.swift */,
+				1363FABA265C1DB100442854 /* RegistrationView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			files = (
 				136075B4265A5D5B00921B5E /* ContentView.swift in Sources */,
 				13394031265BB010004C037F /* OnboardingView.swift in Sources */,
+				1363FABB265C1DB100442854 /* RegistrationView.swift in Sources */,
 				136075B2265A5D5B00921B5E /* MathsGameApp.swift in Sources */,
 				1339402F265BAF22004C037F /* OnboardingItem.swift in Sources */,
 				1363FAB9265BF88A00442854 /* LoginView.swift in Sources */,

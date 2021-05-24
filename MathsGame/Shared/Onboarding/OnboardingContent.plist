@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>imageName</key>
+		<string>mainOnboard</string>
+		<key>content</key>
+		<string>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+		<key>title</key>
+		<string>Arithemetic Games</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>onboardPrimary</string>
+		<key>content</key>
+		<string>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+		<key>title</key>
+		<string>Geometry Games</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>onboardSecondary</string>
+		<key>content</key>
+		<string>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+		<key>title</key>
+		<string>Fictions Games</string>
+	</dict>
+</array>
+</plist>

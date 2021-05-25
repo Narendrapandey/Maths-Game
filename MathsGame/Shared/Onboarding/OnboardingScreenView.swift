@@ -38,7 +38,6 @@ struct OnboardingScreenView: View {
             }
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-        //.indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
         .overlay(
             HStack(spacing: 15) {
                 ForEach(onboardingTypes.indices) { index in

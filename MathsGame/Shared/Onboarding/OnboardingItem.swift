@@ -8,8 +8,8 @@
 import Foundation
 
 struct OnboardingItem: Identifiable {
-    var id = UUID()
-    var title: String?
-    var content: String?
-    var imageName: String?
+    let id = UUID()
+    let title: String?
+    let content: String?
+    let imageName: String?
 }

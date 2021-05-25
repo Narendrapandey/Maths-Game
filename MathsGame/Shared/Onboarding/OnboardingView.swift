@@ -18,7 +18,7 @@ struct OnboardingView: View {
     let item: OnboardingItem
     let limit: Int
     let handler: onboardingGetStarted
-
+    
     // MARK: - Binding -
     @Binding var index: Int
     
@@ -41,18 +41,22 @@ struct OnboardingView: View {
             Spacer()
             
             Image(item.imageName ?? "")
-                .padding(.bottom, 50)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .edgesIgnoringSafeArea(.top)
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal, 20)
                 .font(.system(size: 120, weight: .bold))
             
             Text(item.title ?? "")
                 .padding(.bottom, 2)
-                .font(.system(size: 25, weight: .bold))
+                .font(.system(size: 30, weight: .bold))
                 .foregroundColor(.black)
                 .multilineTextAlignment(.center)
             
             Text(item.content ?? "")
                 .padding(.horizontal, 50)
-                .font(.system(size: 15, weight: .bold))
+                .font(.system(size: 20, weight: .bold))
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
             
@@ -81,7 +85,9 @@ struct OnboardingView: View {
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView(item: OnboardingItem(),
+        OnboardingView(item: OnboardingItem(title: "",
+                                            content: "",
+                                            imageName: ""),
                        limit: 0,
                        index: .constant(0)) { }
     }

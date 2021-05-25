@@ -13,65 +13,69 @@ struct LoginView: View {
     @State var email = ""
     @State var password = ""
     @State var isEmailValid = true
-
+    
     var body: some View {
         
-        VStack {
+        ZStack {
+            //            Image("onboardPrimary")
+            //                .resizable()
+            //                .aspectRatio(contentMode: .fit)
+            //                .edgesIgnoringSafeArea(.top)
             
-            Image("mathsLogo")
-                .padding(.bottom, 30)
-            
-            TextField("Email",
-                      text: $email) { isChanged in
+            VStack (spacing: 15) {
                 
-            }
-            
-            .textFieldStyle(RoundedBorderTextFieldStyle())
-            .padding()
-            .keyboardType(.emailAddress)
-            .frame(width: UIScreen.main.bounds.width - 30, height: 45)
-            .autocapitalization(.none)
-            .disableAutocorrection(true)
-         
-            SecureField("Password",
-                        text: $password)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
-                .frame(width: UIScreen.main.bounds.width - 30, height: 45)
+                Image("mathsLogo")
+                    .padding(.bottom, 30)
+                
+                TextField("Email",
+                          text: $email) { isChanged in
+                    
+                }
+                .frame(height: 45)
+                //.textFieldStyle(RoundedBorderTextFieldStyle())
+                .keyboardType(.emailAddress)
                 .autocapitalization(.none)
                 .disableAutocorrection(true)
+        
+                SecureField("Password",
+                            text: $password)
+                    .frame(height: 45)
+//                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
                 
-                .padding(.bottom, 15)
-            
-            HStack (spacing: 20) {
-                
-                Button(action: {
+                Spacer()
+                    .frame(height: 0)
+                 
+                VStack (spacing: 20) {
                     
-                    print("Login")
+                    Button(action: {
+                        print("Login")
+                        
+                    }, label: {
+                        Text("Login")
+                    })
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 45)
+                    .foregroundColor(.white)
+                    .background(Color.blue)
+                    .clipShape(Capsule())
                     
-                }, label: {
-                    Text("Login")
-                })
-                .padding(.horizontal, 30)
-                .padding(.vertical, 8)
-                .foregroundColor(.white)
-                .background(Color.blue)
-                .clipShape(Capsule())
-                
-                Button(action: {
-                    print("Sign up")
-                    
-                }, label: {
-                    Text("Sign Up")
-                })
-                .padding(.horizontal, 30)
-                .padding(.vertical, 8)
-                .foregroundColor(.white)
-                .background(Color.blue)
-                .clipShape(Capsule())
+                    Button(action: {
+                        print("Sign up")
+                        
+                    }, label: {
+                        Text("Sign Up")
+                    })
+                     .frame(maxWidth: .infinity)
+                     .frame(height: 45)
+                    .foregroundColor(.white)
+                    .background(Color.blue)
+                    .clipShape(Capsule())
+                }
             }
+            .padding(.horizontal, 20)
         }
-        .padding(.bottom, 150)
     }
 }
 

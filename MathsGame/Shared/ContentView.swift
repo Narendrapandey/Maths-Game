@@ -14,16 +14,14 @@ struct ContentView: View {
     
     // MARK: - Binding View -
     var body: some View {
-        
-        LoginView()
-            .fullScreenCover(isPresented: .constant(!hasSeenOnboarding),
-                             content: {
-                                
-                                OnboardingScreenView() {
-                                    hasSeenOnboarding = true
-                                }
-                             })
-        
+ 
+        if hasSeenOnboarding {
+            LoginView()
+        } else {
+            OnboardingScreenView() {
+                hasSeenOnboarding = true
+            }
+        }        
     }
 }
 
